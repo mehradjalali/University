@@ -24,8 +24,6 @@ class Course{
 
         double *getMark();
 
-        Course operator=(Course second);
-
     private:
         string name;
         int unit;

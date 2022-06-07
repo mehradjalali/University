@@ -10,13 +10,6 @@ Course::Course(const Course& second){
     this->mark = second.mark;
 }
 
-Course Course::operator=(Course second){
-    this->name = second.getName();
-        this->unit = second.getUnit();
-        this->mark = second.getMark();
-        return *this;
-}
-
 void Course::setName(string name){
     this->name = name;
 }
