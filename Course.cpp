@@ -2,6 +2,8 @@
 
 Course::Course(){};
 
+Course::Course(string name, int unit, double* mark): name(name), unit(unit), mark(mark){}
+
 Course::~Course(){} 
 
 Course::Course(const Course& second){

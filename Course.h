@@ -9,6 +9,7 @@ class Course{
     public:
         friend ostream& operator<<(ostream& os, Course& first);
         Course();
+        Course(string name, int unit, double* mark);
         Course(const Course&);
         ~Course();
 
