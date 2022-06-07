@@ -11,36 +11,19 @@ class Course{
         Course(const Course&);
         ~Course();
 
-        void setName(string name){
-            this->name = name;
-        }
+        void setName(string);
 
-        string getName(){
-            return name;
-        }
+        string getName();
 
-        void setUnit(int unit){
-            this->unit = unit;
-        }
+        void setUnit(int);
 
-        int getUnit(){
-            return unit;
-        }
+        int getUnit();
 
-        void setMark(double *mark){
-            this->mark = mark;
-        }
+        void setMark(double *);
 
-        double* getMark(){
-            return mark;
-        }
+        double *getMark();
 
-        Course operator=(Course second){
-            this->name = second.getName();
-            this->unit = second.getUnit();
-            this->mark = second.getMark();
-            return *this;
-        }
+        Course operator=(Course second);
 
     private:
         string name;
