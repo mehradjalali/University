@@ -8,7 +8,7 @@ using namespace std;
 class Course{
     public:
         Course();
-        Course(Course&);
+        Course(const Course&);
         ~Course();
 
         void setName(string name){
@@ -35,6 +35,12 @@ class Course{
             return mark;
         }
 
+        Course operator=(Course second){
+            this->name = second.getName();
+            this->unit = second.getUnit();
+            this->mark = second.getMark();
+            return *this;
+        }
 
     private:
         string name;
