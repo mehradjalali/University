@@ -7,6 +7,7 @@ using namespace std;
 
 class Course{
     public:
+        friend ostream& operator<<(ostream& os, Course& first);
         Course();
         Course(const Course&);
         ~Course();
