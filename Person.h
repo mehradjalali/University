@@ -11,6 +11,16 @@ class Person{
         Person(string, string, string, double);
         ~Person();
         Person(const Person&);
+
+        string getFirstName();
+        string getLastName();
+        string getId();
+        double getWorkHours();
+
+        void setFirstName(string firstName);
+        void setLastName(string lastName);
+        void setId(string id);
+        void setWorkHours(double workHours);
     private:
         string firstName;
         string lastName;
