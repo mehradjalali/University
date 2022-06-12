@@ -19,6 +19,8 @@ class Student: public Person{
 
         void setFieldOfStudy(string);
         void setNumOfCourses(int);
+
+        virtual bool validate(string) final override;
     private:
         Course *courses;
         string fieldOfStudy;

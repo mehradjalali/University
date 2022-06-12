@@ -24,7 +24,7 @@ class Person{
         void setId(string id);
         void setWorkHours(double *workHours);
 
-        bool validate(string);
+        virtual bool validate(string);
         void error(string);
         double calculateSalary();
 
