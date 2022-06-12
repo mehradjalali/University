@@ -8,15 +8,17 @@ class University{
     public:
         University();
         University(University&);
-        University(int, int, int, Student*[100], Professor*[100]);
+        University(int, int, int, Student*[10], Professor*[10]);
         ~University();
 
+        double averageGpa();
+        double averageGpaOfField(string);
 
         int budget;
         int numOfProfessors;
         int numOfStudents;
-        Student *students[100];
-        Professor *professors[100];
+        Student *students[10];
+        Professor *professors[10];
 };
 
 #endif
