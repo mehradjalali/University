@@ -54,3 +54,7 @@ double Student::gpa(){
 double Student::calculateSalary(){
     return (getWorkHours() * 20000) * (gpa() > 17 ? 1.1 : 1);
 }
+
+Course Student::getCourse(int index){
+    return courses[index];
+}

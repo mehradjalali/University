@@ -17,6 +17,7 @@ class Student: public Person{
 
         string getFieldOfStudy();
         int getNumOfCourses();
+        Course getCourse(int);
 
         void setFieldOfStudy(string);
         void setNumOfCourses(int);
