@@ -7,6 +7,8 @@ Student::Student(string firstName, string lastName, string id, double* workHours
     this->courses = courses;
     this->fieldOfStudy = fieldOfStudy;
     this->numOfCourses = numOfCourses;
+    if (!validate(getId()))
+        error("invalid id");
 }
 
 Student::Student(Student& second){
