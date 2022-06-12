@@ -23,7 +23,7 @@ ostream& operator<<(ostream& os, Student& first){
 
 ostream& operator<<(ostream& os, Professor& first){
     os << (Person&) first;
-    os << "title: " << first.getTitle();
+    os << "title: " << first.titles[first.getTitle()] << '\n';
     return os;
 }
 
@@ -33,6 +33,6 @@ int main(){
     double a = 20, a1 = 19, a2 = 7;
     c[0] = Course("salam", 4, &a);
     c[1] = Course("dada", 3, &a1);
-    Student s("mehrad", "jalali", "98*a77777", &a2, c, "cs", 2);
-    cout << s.calculateSalary();
+    Professor s("mehrad", "jalali", "98#77777", &a2, PROFESSOR);
+    cout << s;
 }

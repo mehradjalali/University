@@ -8,6 +8,8 @@ Professor::Professor(string firstName, string lastName, string id, double* workH
         error("invalid id");
 }
 
+Professor::~Professor(){}
+
 ProfessorTitle Professor::getTitle(){
     return title;
 }
@@ -16,8 +18,12 @@ void Professor::settitle(ProfessorTitle title){
     this->title = title;
 }
 
-bool validate(string id){
+bool Professor::validate(string id){
     regex patt1("9[0-9][#][0-4|6-9]{5}");
     regex patt2("8[4-9][#][0-4|6-9]{5}");
     return regex_match(id, patt1) || regex_match(id, patt2);
+}
+
+double Professor::calculateSalary(){
+    return getWorkHours() * (50000 + (title + 1) * 10000);
 }
