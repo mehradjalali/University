@@ -7,6 +7,8 @@ Person::Person(string firstName, string lastNmae, string id, double *workHours){
     this->lastName = lastName;
     this->id = id;
     this->workHours = workHours;
+    if (!validate(id))
+        error("invalid id");
 }
 
 Person::~Person(){};
@@ -56,4 +58,9 @@ bool Person::validate(string id){
     regex patt1("9[0-9][^0-9]{1,3}[0-4|6-9]{5}");
     regex patt2("8[4-9][^0-9]{1,3}[0-4|6-9]{5}");
     return regex_match(id, patt1) || regex_match(id, patt2);
+}
+
+void Person::error(string err){
+    cout << err << endl;
+    exit(0);
 }

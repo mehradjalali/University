@@ -25,6 +25,7 @@ class Person{
         void setWorkHours(double *workHours);
 
         bool validate(string);
+        void error(string);
 
         Person& operator=(Person& first);
     private:
