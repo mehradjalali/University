@@ -13,6 +13,7 @@ class University{
 
         double averageGpa();
         double averageGpaOfField(string);
+        double averageMarkOfCourse(string);
 
         int budget;
         int numOfProfessors;

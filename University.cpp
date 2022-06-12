@@ -44,3 +44,19 @@ double University::averageGpaOfField(string field){
         return 0;
     return sum / cnt;
 }
+
+double University::averageMarkOfCourse(string name){
+    double sum = 0, cnt = 0;
+    for (int i = 0; i < numOfStudents; i++){
+        for (int j = 0; j < students[i]->getNumOfCourses(); j++){
+            if (students[i]->getCourse(j).getName() == name){
+                sum += students[i]->getCourse(j).getMark();
+                cnt ++;
+                break;
+            }
+        }
+    }
+    if (cnt == 0)
+        return 0;
+    return sum / cnt;
+}
