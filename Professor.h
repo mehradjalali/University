@@ -12,6 +12,8 @@ class Professor: public Person{
         string getTitle();
 
         void settitle(string);
+
+        virtual bool validate(string) final override;
     private:
         string title;
 };
