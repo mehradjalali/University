@@ -50,3 +50,7 @@ double Student::gpa(){
     }
     return sum / unit;
 }
+
+double Student::calculateSalary(){
+    return (getWorkHours() * 20000) * (gpa() > 17 ? 1.1 : 1);
+}

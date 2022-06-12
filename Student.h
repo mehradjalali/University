@@ -23,6 +23,7 @@ class Student: public Person{
 
         virtual bool validate(string) final override;
         double gpa();
+        virtual double calculateSalary() final override;
     private:
         Course *courses;
         string fieldOfStudy;

@@ -26,7 +26,7 @@ class Person{
 
         virtual bool validate(string);
         void error(string);
-        double calculateSalary();
+        virtual double calculateSalary();
 
         Person& operator=(Person& first);
     private:
