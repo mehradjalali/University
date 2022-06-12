@@ -8,6 +8,10 @@ class Professor: public Person{
     public:
         Professor();
         Professor(string, string, string, double*, string);
+
+        string getTitle();
+
+        void settitle(string);
     private:
         string title;
 };

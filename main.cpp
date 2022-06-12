@@ -1,14 +1,16 @@
 #include "Course.h"
 #include "Person.h"
 #include "Student.h"
+#include "Professor.h"
 
 ostream& operator<<(ostream& os, Course& first){
-    os << "name: " << first.getName() << '\n' << "unit: " << first.getUnit() << '\n' << "mark: " << *first.getMark();
+    os << "name: " << first.getName() << '\n' << "unit: " << first.getUnit() << '\n' << "mark: " << first.getMark();
     return os;
 }
 
 ostream& operator<<(ostream& os, Person& first){
-    os << "firstName: " << first.getFirstName() << '\n' << "lastName: " << first.getLastName() << '\n' << "id: " << first.getId() << '\n' << "workHours: " << first.getWorkHours() << '\n';
+    os << "firstName: " << first.getFirstName() << '\n' << "lastName: ";
+    os << first.getLastName() << '\n' << "id: " << first.getId() << '\n' << "workHours: " << first.getWorkHours() << '\n';
     return os;
 }
 
@@ -19,9 +21,18 @@ ostream& operator<<(ostream& os, Student& first){
     return os;
 }
 
+ostream& operator<<(ostream& os, Professor& first){
+    os << (Person&) first;
+    os << "title: " << first.getTitle();
+    return os;
+}
+
 
 int main(){
-    double b = 4.56;
-    Person a("amin" , "z", "83abc11388", &b);
-    cout << a.validate(a.getId());
+    Course c[2];
+    double a = 20, a1 = 19, a2 = 7;
+    c[0] = Course("salam", 4, &a);
+    c[1] = Course("dada", 3, &a1);
+    Student s("mehrad", "jalali", "98*a77777", &a2, c, "cs", 2);
+    cout << s.calculateSalary();
 }
