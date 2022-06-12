@@ -45,7 +45,7 @@ double Student::gpa(){
     double sum = 0;
     int unit = 0;
     for (int i = 0; i < numOfCourses; i++){
-        sum += courses[i].getMark();
+        sum += courses[i].getMark() * courses[i].getUnit();
         unit += courses[i].getUnit();
     }
     return sum / unit;
