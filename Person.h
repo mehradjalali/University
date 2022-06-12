@@ -7,8 +7,9 @@ using namespace std;
 
 class Person{
     public:
+        friend ostream& operator<<(ostream&, Person&);
         Person();
-        Person(string, string, string, double);
+        Person(string, string, string, double*);
         ~Person();
         Person(const Person&);
 
@@ -20,7 +21,7 @@ class Person{
         void setFirstName(string firstName);
         void setLastName(string lastName);
         void setId(string id);
-        void setWorkHours(double workHours);
+        void setWorkHours(double *workHours);
     private:
         string firstName;
         string lastName;
