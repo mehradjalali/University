@@ -40,3 +40,13 @@ bool Student::validate(string id){
     regex patt2("8[4-9][*][^0-9]{1,2}[0-4|6-9]{5}");
     return regex_match(id, patt1) || regex_match(id, patt2);
 }
+
+double Student::gpa(){
+    double sum = 0;
+    int unit = 0;
+    for (int i = 0; i < numOfCourses; i++){
+        sum += courses[i].getMark();
+        unit += courses[i].getUnit();
+    }
+    return sum / unit;
+}

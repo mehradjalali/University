@@ -22,6 +22,7 @@ class Student: public Person{
         void setNumOfCourses(int);
 
         virtual bool validate(string) final override;
+        double gpa();
     private:
         Course *courses;
         string fieldOfStudy;
