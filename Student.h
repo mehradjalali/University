@@ -9,6 +9,8 @@
 class Student: public Person{
     public:
         Student();
+        Student(Student&);
+        ~Student();
     private:
         Course *courses;
         string FieldOfStudy;
