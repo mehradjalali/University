@@ -43,3 +43,10 @@ void Person::setId(string id){
 void Person::setWorkHours(double *workHours){
     this->workHours = workHours;
 }
+
+Person& Person::operator=(Person& first){
+    this->firstName = first.getFirstName();
+    this->lastName = first.getLastName();
+    this->id = first.getId();
+    *this->workHours = first.getWorkHours();
+}

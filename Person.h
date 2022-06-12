@@ -22,6 +22,8 @@ class Person{
         void setLastName(string lastName);
         void setId(string id);
         void setWorkHours(double *workHours);
+
+        Person& operator=(Person& first);
     private:
         string firstName;
         string lastName;
