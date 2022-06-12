@@ -11,6 +11,7 @@ class Student: public Person{
         friend ostream& operator<<(ostream& , Student&);
 
         Student();
+        Student(string firstName, string lastName, string id, double* workHours, Course *courses, string fieldOfStudy, int numOfCourses);
         Student(Student&);
         ~Student();
 

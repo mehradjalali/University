@@ -1,7 +1,13 @@
 #include "Student.h"
 
 
-Student::Student(){};
+Student::Student():Person(){};
+
+Student::Student(string firstName, string lastName, string id, double* workHours, Course *courses, string fieldOfStudy, int numOfCourses):Person(firstName, lastName, id, workHours){
+    this->courses = courses;
+    this->fieldOfStudy = fieldOfStudy;
+    this->numOfCourses = numOfCourses;
+}
 
 Student::Student(Student& second){
     this->courses = second.courses;
