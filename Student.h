@@ -11,9 +11,15 @@ class Student: public Person{
         Student();
         Student(Student&);
         ~Student();
+
+        string getFieldOfStudy();
+        int getNumOfCourses();
+
+        void setFieldOfStudy(string);
+        void setNumOfCourses(int);
     private:
         Course *courses;
-        string FieldOfStudy;
+        string fieldOfStudy;
         int numOfCourses;
 };
 
