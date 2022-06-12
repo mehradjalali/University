@@ -64,3 +64,7 @@ void Person::error(string err){
     cout << err << endl;
     exit(0);
 }
+
+double Person::calculateSalary(){
+    return (*workHours) * 10000;
+}
