@@ -17,8 +17,8 @@ class University{
         int budget;
         int numOfProfessors;
         int numOfStudents;
-        Student *students[10];
-        Professor *professors[10];
+        Student *students[100];
+        Professor *professors[100];
 };
 
 #endif
