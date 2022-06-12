@@ -32,6 +32,6 @@ void Course::setMark(double *mark){
     this->mark = mark;
 }
 
-double* Course::getMark(){
-    return mark;
+double Course::getMark(){
+    return *mark;
 }

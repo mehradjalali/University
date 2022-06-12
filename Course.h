@@ -23,7 +23,7 @@ class Course{
 
         void setMark(double *);
 
-        double *getMark();
+        double getMark();
 
     private:
         string name;
