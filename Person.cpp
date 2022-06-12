@@ -2,7 +2,7 @@
 
 Person::Person(){}
 
-Person::Person(string firstName, string lastNmae, string id, double *workHours){
+Person::Person(string firstName, string lastName, string id, double *workHours){
     this->firstName = firstName;
     this->lastName = lastName;
     this->id = id;
