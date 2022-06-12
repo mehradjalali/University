@@ -60,3 +60,13 @@ double University::averageMarkOfCourse(string name){
         return 0;
     return sum / cnt;
 }
+
+
+bool University::isEnoughBudget(){
+    int ans = 0;
+    for (int i = 0; i < numOfProfessors; i++)
+        ans += professors[i]->calculateSalary();
+    for (int i = 0; i < numOfStudents; i++)
+        ans += students[i]->calculateSalary();
+    return budget > ans;
+}
