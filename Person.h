@@ -2,6 +2,7 @@
 #define PERSON_H
 
 #include <iostream>
+#include <regex>
 
 using namespace std;
 
@@ -22,6 +23,8 @@ class Person{
         void setLastName(string lastName);
         void setId(string id);
         void setWorkHours(double *workHours);
+
+        bool validate(string);
 
         Person& operator=(Person& first);
     private:

@@ -14,6 +14,6 @@ ostream& operator<<(ostream& os, Person& first){
 
 int main(){
     double b = 4.56;
-    Person a("amin" , "z", "5252", &b);
-    cout << a;
+    Person a("amin" , "z", "83abc11388", &b);
+    cout << a.validate(a.getId());
 }
