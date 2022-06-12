@@ -8,6 +8,8 @@
 
 class Student: public Person{
     public:
+        friend ostream& operator<<(ostream& , Student&);
+
         Student();
         Student(Student&);
         ~Student();
