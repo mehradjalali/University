@@ -3,19 +3,26 @@
 
 #include "Person.h"
 
+enum ProfessorTitle{
+    INSTRUCTOR,
+    ASSISTANT_PROFESSOR,
+    ASSOCIATE_PROFESSOR,
+    PROFESSOR
+};
+
 
 class Professor: public Person{
     public:
         Professor();
-        Professor(string, string, string, double*, string);
+        Professor(string, string, string, double*, ProfessorTitle);
 
-        string getTitle();
+        ProfessorTitle getTitle();
 
-        void settitle(string);
+        void settitle(ProfessorTitle);
 
         virtual bool validate(string) final override;
     private:
-        string title;
+        ProfessorTitle title;
 };
 
 #endif

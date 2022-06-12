@@ -2,17 +2,17 @@
 
 Professor::Professor():Person(){}
 
-Professor::Professor(string firstName, string lastName, string id, double* workHours, string title):Person(firstName, lastName, id, workHours){
+Professor::Professor(string firstName, string lastName, string id, double* workHours, ProfessorTitle title):Person(firstName, lastName, id, workHours){
     this->title = title;
     if (!validate(id))
         error("invalid id");
 }
 
-string Professor::getTitle(){
+ProfessorTitle Professor::getTitle(){
     return title;
 }
 
-void Professor::settitle(string title){
+void Professor::settitle(ProfessorTitle title){
     this->title = title;
 }
 
