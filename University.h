@@ -13,6 +13,7 @@ class University{
 
 
         void printCourses();
+        void saveToFile();
         double averageGpa();
         double averageGpaOfField(string);
         double averageMarkOfCourse(string);

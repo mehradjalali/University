@@ -1,5 +1,5 @@
 #include "University.h"
-#include <set>
+#include <fstream>
 
 #define F first
 #define S second
@@ -102,4 +102,24 @@ void University::printCourses(){
             cout << u << ": " << Avg << endl;
         }
     }
+}
+
+void University::saveToFile(){
+    map <string, pair <double, string>> fields;
+    for (int i = 0; i < numOfStudents; i++)
+        for (int j = 0; j < students[i]->getNumOfCourses(); j++){
+            double avg = students[i]->gpa();
+            string field = students[i]->getFieldOfStudy();
+            if (avg > fields[field].F)
+                fields[field] = make_pair(avg, students[i]->getId());
+        }
+    ofstream topStu;
+    topStu.open("topStudents.txt");
+    for (auto u : fields){
+        string field = u.F;
+        double avg = u.S.F;
+        string id = u.S.S;
+        topStu << "field: " << field << " id: " << id << " average: " << avg << '\n';
+    }
+    topStu.close();
 }
