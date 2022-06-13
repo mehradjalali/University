@@ -8,6 +8,7 @@ using namespace std;
 class Course{
     public:
         friend ostream& operator<<(ostream& os, Course& first);
+        friend istream& operator>>(istream& os, Course& first);
         Course();
         Course(string name, int unit, double* mark);
         Course(const Course&);

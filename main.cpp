@@ -39,6 +39,14 @@ ostream& operator<<(ostream& os, University& first){
         os << first.students[i]->getFirstName() << " " << first.students[i]->getLastName() << endl;
 }
 
+istream& operator>>(istream& is, Course& first){
+    cout << "Enter name: ";
+    is >> first.name;
+    cout << "\nEnter unit: ";
+    is >> first.unit;
+    cout << "Enter mark: ";
+    is >> *first.mark;
+}
 
 int main(){
     Course c[2];
