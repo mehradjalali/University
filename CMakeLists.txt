@@ -9,7 +9,7 @@ set(SOURCE
     Person.cpp
     Professor.cpp
     Student.cpp
-    University)
+    University.cpp)
 
 add_executable(${PROJECT_NAME}
     main.cpp

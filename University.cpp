@@ -29,7 +29,7 @@ double University::averageGpa(){
     for (int i = 0; i < numOfStudents; i++){
         sum += students[i]->gpa();
     }
-    return sum / 10;
+    return sum / numOfStudents;
 }
 
 double University::averageGpaOfField(string field){
@@ -68,5 +68,5 @@ bool University::isEnoughBudget(){
         ans += professors[i]->calculateSalary();
     for (int i = 0; i < numOfStudents; i++)
         ans += students[i]->calculateSalary();
-    return budget > ans;
+    return budget >= ans;
 }
