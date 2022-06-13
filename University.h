@@ -11,6 +11,8 @@ class University{
         University(int, int, int, Student*[10], Professor*[10]);
         ~University();
 
+
+        void printCourses();
         double averageGpa();
         double averageGpaOfField(string);
         double averageMarkOfCourse(string);

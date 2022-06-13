@@ -1,4 +1,10 @@
 #include "University.h"
+#include <set>
+
+#define F first
+#define S second
+#define PB push_back
+typedef pair<double,double> pdd;
 
 University::University(){}
 
@@ -69,4 +75,31 @@ bool University::isEnoughBudget(){
     for (int i = 0; i < numOfStudents; i++)
         ans += students[i]->calculateSalary();
     return budget >= ans;
+}
+
+void University::printCourses(){
+    map <string, pdd> coursesSum;
+    vector <string> courses;
+    for (int i = 0; i < numOfStudents; i++)
+        for (int j = 0; j < students[i]->getNumOfCourses(); j++)
+            coursesSum[students[i]->getCourse(j).getName()].F += students[i]->getCourse(j).getMark(),
+            coursesSum[students[i]->getCourse(j).getName()].S++;
+    for (auto u: coursesSum)
+        courses.PB(u.F);
+    for (int i = 0; i < courses.size(); i++){
+        string a = courses[i];
+        double iAvg = coursesSum[a].F / coursesSum[a].S;
+        for (int j = i + 1; j < courses.size(); j++){
+            string b = courses[j];
+            double jAvg = coursesSum[b].F / coursesSum[b].S;
+            if (iAvg > jAvg){
+                courses[i] = b;
+                courses[j] = a;
+            }
+        }
+        for (auto u : courses){
+            double Avg = coursesSum[u].F / coursesSum[u].S;
+            cout << u << ": " << Avg << endl;
+        }
+    }
 }
