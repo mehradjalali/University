@@ -2,6 +2,7 @@
 #include "Person.h"
 #include "Student.h"
 #include "Professor.h"
+#include "University.h"
 
 ostream& operator<<(ostream& os, Course& first){
     os << "name: " << first.getName() << '\n' << "unit: " << first.getUnit() << '\n' << "mark: " << first.getMark();
@@ -25,6 +26,17 @@ ostream& operator<<(ostream& os, Professor& first){
     os << (Person&) first;
     os << "title: " << first.titles[first.getTitle()] << '\n';
     return os;
+}
+
+ostream& operator<<(ostream& os, University& first){
+    first.sort(*first.professors, first.numOfProfessors);
+    first.sort(*first.students, first.numOfStudents);
+    os << "Professors: \n";
+    for (int i = 0; i < first.numOfProfessors; i++)
+        os << first.professors[i]->getFirstName() << " " << first.professors[i]->getLastName() << endl;
+    os << "Students: \n";
+    for (int i = 0; i < first.numOfStudents; i++)
+        os << first.students[i]->getFirstName() << " " << first.students[i]->getLastName() << endl;
 }
 
 

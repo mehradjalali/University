@@ -123,3 +123,24 @@ void University::saveToFile(){
     }
     topStu.close();
 }
+
+void University::sort(Person* p, int n){
+    for (int i = 0; i < n; i++){
+        string iYear = p[i].getId().substr(0, 2), iFName = p[i].getFirstName(), jName = p[i].getLastName();
+        for (int j = i + 1; j < n; j++){
+            string jYear = p[j].getId().substr(0, 2), jFName = p[j].getFirstName(), iName = p[j].getLastName();
+            if (iYear > jYear){
+                Person temp = p[i];
+                p[i] = p[j];
+                p[j] = temp;
+            }
+            if (iYear == jYear){
+                if (iName > jName or (iName == jName and iFName > jFName)){
+                    Person temp = p[i];
+                    p[i] = p[j];
+                    p[j] = temp;
+                }
+            }
+        }
+    }
+}

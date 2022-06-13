@@ -6,6 +6,8 @@
 
 class University{
     public:
+        friend ostream& operator<<(ostream& , University&);
+
         University();
         University(University&);
         University(int, int, int, Student*[10], Professor*[10]);
@@ -24,6 +26,8 @@ class University{
         int numOfStudents;
         Student *students[100];
         Professor *professors[100];
+    private:
+        void sort(Person*, int);
 };
 
 #endif
