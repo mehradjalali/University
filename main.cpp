@@ -148,6 +148,7 @@ istream &operator>>(istream &is, Person &first) {
     double temp;
     is >> temp;
     first.setWorkHours(temp);
+    cout << "DONE" << endl;
     return is;
 }
 

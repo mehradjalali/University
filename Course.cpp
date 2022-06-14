@@ -1,6 +1,8 @@
 #include "Course.h"
 
-Course::Course(){};
+Course::Course(){
+    this->mark = new double();
+};
 
 Course::Course(string name, int unit, double mark) : name(name), unit(unit) {
     this->mark = new double(mark);

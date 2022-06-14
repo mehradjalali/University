@@ -1,6 +1,8 @@
 #include "Person.h"
 
-Person::Person() {}
+Person::Person() {
+    this->workHours = new double();
+}
 
 Person::Person(string firstName, string lastName, string id, double workHours) {
     this->firstName = firstName;

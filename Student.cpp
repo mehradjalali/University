@@ -1,6 +1,8 @@
 #include "Student.h"
 
-Student::Student() : Person(){};
+Student::Student() : Person(){
+    this->courses = new Course();
+};
 
 Student::Student(string firstName, string lastName, string id, double workHours, Course *courses, string fieldOfStudy, int numOfCourses) : Person(firstName, lastName, id, workHours) {
     this->fieldOfStudy = fieldOfStudy;
