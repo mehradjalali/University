@@ -157,8 +157,8 @@ istream &operator>>(istream &is, Student &first) {
     is >> first.fieldOfStudy;
     cout << "Enter number of courses: ";
     is >> first.numOfCourses;
-    Course temp;
     for (int i = 0; i < first.numOfCourses; i++) {
+        Course temp;
         cout << "Enter course " << i << ":\n";
         is >> temp;
         first.setCourse(i, temp);
@@ -190,16 +190,16 @@ istream &operator>>(istream &is, University &first) {
     is >> first.budget;
     cout << "Enter number of professors: ";
     is >> first.numOfProfessors;
-    Professor temp;
     for (int i = 0; i < first.numOfProfessors; i++) {
+        Professor temp;
         cout << "Enter professor " << i << ":\n";
         is >> temp;
         first.setProfessor(i, temp);
     }
     cout << "Enter number of students: ";
     is >> first.numOfStudents;
-    Student temp2;
     for (int i = 0; i < first.numOfStudents; i++) {
+        Student temp2;
         cout << "Enter student " << i << ":\n";
         is >> temp2;
         first.setStudent(i, temp2);
