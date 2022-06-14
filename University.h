@@ -10,7 +10,7 @@ public:
     friend istream &operator>>(istream &, University &);
 
     University();
-    University(University &);
+    University(const University &);
     University(int, int, int, Student *[100], Professor *[100]);
     ~University();
 

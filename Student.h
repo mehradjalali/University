@@ -11,7 +11,7 @@ public:
 
     Student();
     Student(string firstName, string lastName, string id, double workHours, Course *courses, string fieldOfStudy, int numOfCourses);
-    Student(Student &);
+    Student(const Student &);
     ~Student();
 
     string getFieldOfStudy();

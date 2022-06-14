@@ -8,7 +8,7 @@ typedef pair<double, double> pdd;
 
 University::University() {}
 
-University::University(University &second) {
+University::University(const University &second) {
     this->budget = second.budget;
     this->numOfProfessors = second.numOfProfessors;
     this->numOfStudents = second.numOfStudents;
