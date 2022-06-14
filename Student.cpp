@@ -12,7 +12,7 @@ Student::Student(string firstName, string lastName, string id, double workHours,
         this->courses[i] = courses[i];
 }
 
-Student::Student(Student &second) {
+Student::Student(Student &second) : Person (second) {
     this->numOfCourses = second.numOfCourses;
     this->fieldOfStudy = second.fieldOfStudy;
     this->courses = new Course[numOfCourses];
