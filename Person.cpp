@@ -40,6 +40,8 @@ void Person::setLastName(string lastName) {
 }
 
 void Person::setId(string id) {
+    if (!validate(id))
+        error("invalid id");
     this->id = id;
 }
 
@@ -58,7 +60,8 @@ Person &Person::operator=(Person &first) {
 bool Person::validate(string id) {
     regex patt1("9[0-9][^0-9]{1,3}[0-4|6-9]{5}");
     regex patt2("8[4-9][^0-9]{1,3}[0-4|6-9]{5}");
-    return regex_match(id, patt1) || regex_match(id, patt2);
+    regex patt3("00[^0-9]{1,3}[0-4|6-9]{5}");
+    return regex_match(id, patt1) or regex_match(id, patt2) or regex_match(id, patt3);
 }
 
 void Person::error(string err) {
