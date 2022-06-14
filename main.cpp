@@ -5,7 +5,7 @@
 #include "University.h"
 
 #define err(x) cout << #x << ":\n" \
-                    << x << "\n\n"
+                    << x << endl;
 
 int main() {
     University uni0;
@@ -131,7 +131,9 @@ istream &operator>>(istream &is, Course &first) {
     cout << "Enter unit: ";
     is >> first.unit;
     cout << "Enter mark: ";
-    is >> *first.mark;
+    double t;
+    is >> t;
+    first.setMark(t);
     return is;
 }
 
