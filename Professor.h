@@ -15,7 +15,7 @@ public:
     friend istream &operator>>(istream &, Professor &);
     Professor();
     Professor(Professor &);
-    Professor(string, string, string, double *, ProfessorTitle);
+    Professor(string, string, string, double, ProfessorTitle);
     ~Professor();
 
     ProfessorTitle getTitle();

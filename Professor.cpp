@@ -2,7 +2,7 @@
 
 Professor::Professor() : Person() {}
 
-Professor::Professor(string firstName, string lastName, string id, double *workHours, ProfessorTitle title) : Person(firstName, lastName, id, workHours) {
+Professor::Professor(string firstName, string lastName, string id, double workHours, ProfessorTitle title) : Person(firstName, lastName, id, workHours) {
     this->title = title;
     if (!validate(id))
         error("invalid id");
