@@ -10,7 +10,7 @@ public:
 
     University();
     University(University &);
-    University(int, int, int, Student *[10], Professor *[10]);
+    University(int, int, int, Student *[100], Professor *[100]);
     ~University();
 
     void printCourses();
