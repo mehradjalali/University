@@ -13,7 +13,7 @@ Course::~Course() {
 Course::Course(const Course &second) {
     this->name = second.name;
     this->unit = second.unit;
-    this->mark = second.mark;
+    this->mark = new double (*second.mark);
 }
 
 void Course::setName(string name) {
