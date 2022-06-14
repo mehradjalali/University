@@ -14,7 +14,7 @@ class Professor : public Person {
 public:
     friend istream &operator>>(istream &, Professor &);
     Professor();
-    Professor(Professor &);
+    Professor(const Professor &);
     Professor(string, string, string, double, ProfessorTitle);
     ~Professor();
 

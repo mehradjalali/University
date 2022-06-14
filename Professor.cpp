@@ -8,6 +8,10 @@ Professor::Professor(string firstName, string lastName, string id, double workHo
         error("invalid id");
 }
 
+Professor::Professor(const Professor &second) : Person(second) {
+    this->title = second.title;
+}
+
 Professor::~Professor() {}
 
 ProfessorTitle Professor::getTitle() {
