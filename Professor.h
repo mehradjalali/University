@@ -3,24 +3,24 @@
 
 #include "Person.h"
 
-enum ProfessorTitle {
-    INSTRUCTOR,
-    ASSISTANT_PROFESSOR,
-    ASSOCIATE_PROFESSOR,
-    PROFESSOR
-};
+// enum string {
+//     INSTRUCTOR,
+//     ASSISTANT_PROFESSOR,
+//     ASSOCIATE_PROFESSOR,
+//     PROFESSOR
+// };
 
 class Professor : public Person {
 public:
     friend istream &operator>>(istream &, Professor &);
     Professor();
     Professor(const Professor &);
-    Professor(string, string, string, double, ProfessorTitle);
+    Professor(string, string, string, double, string);
     ~Professor();
 
-    ProfessorTitle getTitle();
+    string getTitle();
 
-    void setTitle(ProfessorTitle);
+    void setTitle(string);
 
     virtual bool validate(string) final override;
     virtual double calculateSalary() final override;
@@ -28,7 +28,7 @@ public:
 
 private:
     string titles[4] = {"INSTRUCTOR", "ASSISTANT_PROFESSOR", "ASSOCIATE_PROFESSOR", "PROFESSOR"};
-    ProfessorTitle title;
+    string title;
 };
 
 #endif

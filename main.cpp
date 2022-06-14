@@ -60,13 +60,13 @@ int main() {
     err(stu1.gpa());
     err(stu1.calculateSalary());
 
-    Professor prf0("Jeff", "Costello", "92#12389", 8.0, ProfessorTitle(1)); // Constructor
+    Professor prf0("Jeff", "Costello", "92#12389", 8.0, "PROFESSOR"); // Constructor
     err(prf0);                                                              // << operator for Professor
 
     Professor prf1 = prf0; // Copy Constructor
     err(prf1);
 
-    prf1.setTitle(ProfessorTitle(0));
+    prf1.setTitle("INSTRUCTOR");
     err(prf1.getTitle());
 
     prf1.setWorkHours(7.0);
@@ -109,7 +109,7 @@ ostream &operator<<(ostream &os, Student &first) {
 
 ostream &operator<<(ostream &os, Professor &first) {
     os << (Person &)first;
-    os << "title: " << first.titles[first.getTitle()] << '\n';
+    os << "title: " << first.getTitle() << '\n';
     return os;
 }
 
@@ -176,7 +176,7 @@ istream &operator>>(istream &is, Professor &first) {
     for (int i = 0; i < 4; i++) {
         if (first.titles[i] == s) {
             F = true;
-            first.setTitle(ProfessorTitle(i));
+            first.setTitle(s);
         }
     }
     if (!F) {
