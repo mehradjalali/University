@@ -17,7 +17,6 @@ public:
     string getFieldOfStudy();
     int getNumOfCourses();
     Course getCourse(int);
-    void setCourse(int, Course);
 
     void setFieldOfStudy(string);
     void setNumOfCourses(int);
@@ -27,6 +26,7 @@ public:
     virtual double calculateSalary() final override;
 
 private:
+    void setCourse(int, Course);
     Course *courses;
     string fieldOfStudy;
     int numOfCourses;
