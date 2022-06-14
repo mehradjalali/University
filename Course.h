@@ -5,30 +5,30 @@
 
 using namespace std;
 
-class Course{
-    public:
-        friend ostream& operator<<(ostream& os, Course& first);
-        friend istream& operator>>(istream& os, Course& first);
-        Course();
-        Course(string name, int unit, double* mark);
-        Course(const Course&);
-        ~Course();
+class Course {
+public:
+    friend ostream &operator<<(ostream &os, Course &first);
+    friend istream &operator>>(istream &os, Course &first);
+    Course();
+    Course(string name, int unit, double *mark);
+    Course(const Course &);
+    ~Course();
 
-        void setName(string);
+    void setName(string);
 
-        string getName();
+    string getName();
 
-        void setUnit(int);
+    void setUnit(int);
 
-        int getUnit();
+    int getUnit();
 
-        void setMark(double *);
+    void setMark(double *);
 
-        double getMark();
+    double getMark();
 
-    private:
-        string name;
-        int unit;
-        double *mark;
+private:
+    string name;
+    int unit;
+    double *mark;
 };
 #endif

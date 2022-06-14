@@ -1,35 +1,34 @@
 #ifndef STUDENT_H
 #define STUDENT_H
 
-
-#include "Person.h"
 #include "Course.h"
+#include "Person.h"
 
+class Student : public Person {
+public:
+    friend ostream &operator<<(ostream &, Student &);
+    friend istream &operator>>(istream &, Student &);
 
-class Student: public Person{
-    public:
-        friend ostream& operator<<(ostream&, Student&);
-        friend istream& operator>>(istream&, Student&);
+    Student();
+    Student(string firstName, string lastName, string id, double *workHours, Course *courses, string fieldOfStudy, int numOfCourses);
+    Student(Student &);
+    ~Student();
 
-        Student();
-        Student(string firstName, string lastName, string id, double* workHours, Course *courses, string fieldOfStudy, int numOfCourses);
-        Student(Student&);
-        ~Student();
+    string getFieldOfStudy();
+    int getNumOfCourses();
+    Course &getCourse(int);
 
-        string getFieldOfStudy();
-        int getNumOfCourses();
-        Course& getCourse(int);
+    void setFieldOfStudy(string);
+    void setNumOfCourses(int);
 
-        void setFieldOfStudy(string);
-        void setNumOfCourses(int);
+    virtual bool validate(string) final override;
+    double gpa();
+    virtual double calculateSalary() final override;
 
-        virtual bool validate(string) final override;
-        double gpa();
-        virtual double calculateSalary() final override;
-    private:
-        Course *courses;
-        string fieldOfStudy;
-        int numOfCourses;
+private:
+    Course *courses;
+    string fieldOfStudy;
+    int numOfCourses;
 };
 
 #endif

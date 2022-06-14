@@ -1,8 +1,8 @@
 #include "Person.h"
 
-Person::Person(){}
+Person::Person() {}
 
-Person::Person(string firstName, string lastName, string id, double *workHours){
+Person::Person(string firstName, string lastName, string id, double *workHours) {
     this->firstName = firstName;
     this->lastName = lastName;
     this->id = id;
@@ -13,40 +13,39 @@ Person::Person(string firstName, string lastName, string id, double *workHours){
 
 Person::~Person(){};
 
-
-string Person::getFirstName(){
+string Person::getFirstName() {
     return firstName;
 }
 
-string Person::getLastName(){
+string Person::getLastName() {
     return lastName;
 }
 
-string Person::getId(){
+string Person::getId() {
     return id;
 }
 
-double Person::getWorkHours(){
+double Person::getWorkHours() {
     return *workHours;
 }
 
-void Person::setFirstName(string firstName){
+void Person::setFirstName(string firstName) {
     this->firstName = firstName;
 }
 
-void Person::setLastName(string lastName){
+void Person::setLastName(string lastName) {
     this->lastName = lastName;
 }
 
-void Person::setId(string id){
+void Person::setId(string id) {
     this->id = id;
 }
 
-void Person::setWorkHours(double *workHours){
+void Person::setWorkHours(double *workHours) {
     this->workHours = workHours;
 }
 
-Person& Person::operator=(Person& first){
+Person &Person::operator=(Person &first) {
     this->firstName = first.getFirstName();
     this->lastName = first.getLastName();
     this->id = first.getId();
@@ -54,17 +53,17 @@ Person& Person::operator=(Person& first){
     return *this;
 }
 
-bool Person::validate(string id){
+bool Person::validate(string id) {
     regex patt1("9[0-9][^0-9]{1,3}[0-4|6-9]{5}");
     regex patt2("8[4-9][^0-9]{1,3}[0-4|6-9]{5}");
     return regex_match(id, patt1) || regex_match(id, patt2);
 }
 
-void Person::error(string err){
+void Person::error(string err) {
     cout << err << endl;
     exit(0);
 }
 
-double Person::calculateSalary(){
+double Person::calculateSalary() {
     return (*workHours) * 10000;
 }

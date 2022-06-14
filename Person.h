@@ -6,35 +6,35 @@
 
 using namespace std;
 
-class Person{
-    public:
-        friend ostream& operator<<(ostream&, Person&);
-        friend istream& operator>>(istream&, Person&);
-        Person();
-        Person(string, string, string, double*);
-        ~Person();
-        Person(const Person&);
+class Person {
+public:
+    friend ostream &operator<<(ostream &, Person &);
+    friend istream &operator>>(istream &, Person &);
+    Person();
+    Person(string, string, string, double *);
+    ~Person();
+    Person(const Person &);
 
-        string getFirstName();
-        string getLastName();
-        string getId();
-        double getWorkHours();
+    string getFirstName();
+    string getLastName();
+    string getId();
+    double getWorkHours();
 
-        void setFirstName(string firstName);
-        void setLastName(string lastName);
-        void setId(string id);
-        void setWorkHours(double *workHours);
+    void setFirstName(string firstName);
+    void setLastName(string lastName);
+    void setId(string id);
+    void setWorkHours(double *workHours);
 
-        virtual bool validate(string);
-        void error(string);
-        virtual double calculateSalary();
+    virtual bool validate(string);
+    void error(string);
+    virtual double calculateSalary();
 
-        Person& operator=(Person& first);
-    private:
-        string firstName;
-        string lastName;
-        string id;
-        double* workHours;
+    Person &operator=(Person &first);
 
+private:
+    string firstName;
+    string lastName;
+    string id;
+    double *workHours;
 };
 #endif

@@ -77,7 +77,6 @@ istream &operator>>(istream &is, Student &first) {
     is >> first.numOfCourses;
     for (int i = 0; i < first.numOfCourses; i++)
         is >> first.getCourse(i);
-    
 }
 
 int main() {
