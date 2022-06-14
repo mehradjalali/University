@@ -8,7 +8,8 @@
 
 class Student: public Person{
     public:
-        friend ostream& operator<<(ostream& , Student&);
+        friend ostream& operator<<(ostream&, Student&);
+        friend istream& operator>>(istream&, Student&);
 
         Student();
         Student(string firstName, string lastName, string id, double* workHours, Course *courses, string fieldOfStudy, int numOfCourses);
@@ -17,7 +18,7 @@ class Student: public Person{
 
         string getFieldOfStudy();
         int getNumOfCourses();
-        Course getCourse(int);
+        Course& getCourse(int);
 
         void setFieldOfStudy(string);
         void setNumOfCourses(int);
