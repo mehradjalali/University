@@ -12,6 +12,7 @@ enum ProfessorTitle {
 
 class Professor : public Person {
 public:
+    friend istream &operator>>(istream &, Professor &);
     Professor();
     Professor(Professor &);
     Professor(string, string, string, double *, ProfessorTitle);
@@ -19,7 +20,7 @@ public:
 
     ProfessorTitle getTitle();
 
-    void settitle(ProfessorTitle);
+    void setTitle(ProfessorTitle);
 
     virtual bool validate(string) final override;
     virtual double calculateSalary() final override;

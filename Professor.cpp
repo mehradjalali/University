@@ -14,7 +14,7 @@ ProfessorTitle Professor::getTitle() {
     return title;
 }
 
-void Professor::settitle(ProfessorTitle title) {
+void Professor::setTitle(ProfessorTitle title) {
     this->title = title;
 }
 
