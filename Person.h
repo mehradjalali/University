@@ -35,7 +35,7 @@ private:
     string lastName;
     string id;
     double *workHours;
-    
+
 protected:
     void error(string);
 };

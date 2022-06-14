@@ -6,7 +6,7 @@ Person::Person(string firstName, string lastName, string id, double workHours) {
     this->firstName = firstName;
     this->lastName = lastName;
     this->id = id;
-    this->workHours = new double (workHours);
+    this->workHours = new double(workHours);
     if (!validate(id))
         error("invalid id");
 }
@@ -15,10 +15,10 @@ Person::Person(const Person &second) {
     this->firstName = second.firstName;
     this->lastName = second.lastName;
     this->id = id;
-    this->workHours = new double (*second.workHours);
+    this->workHours = new double(*second.workHours);
 }
 
-Person::~Person(){
+Person::~Person() {
     delete workHours;
 };
 
