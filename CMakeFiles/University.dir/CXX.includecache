@@ -6,9 +6,17 @@
 
 #IncludeRegexTransform: 
 
+/home/mehrad/Documents/AP/HW5 University/University/Course.cpp
+Course.h
+/home/mehrad/Documents/AP/HW5 University/University/Course.h
+
 /home/mehrad/Documents/AP/HW5 University/University/Course.h
 iostream
 -
+
+/home/mehrad/Documents/AP/HW5 University/University/Person.cpp
+Person.h
+/home/mehrad/Documents/AP/HW5 University/University/Person.h
 
 /home/mehrad/Documents/AP/HW5 University/University/Person.h
 iostream
@@ -16,31 +24,13 @@ iostream
 regex
 -
 
-/home/mehrad/Documents/AP/HW5 University/University/Professor.h
-Person.h
-/home/mehrad/Documents/AP/HW5 University/University/Person.h
+/home/mehrad/Documents/AP/HW5 University/University/Student.cpp
+Student.h
+/home/mehrad/Documents/AP/HW5 University/University/Student.h
 
 /home/mehrad/Documents/AP/HW5 University/University/Student.h
 Course.h
 /home/mehrad/Documents/AP/HW5 University/University/Course.h
 Person.h
 /home/mehrad/Documents/AP/HW5 University/University/Person.h
-
-/home/mehrad/Documents/AP/HW5 University/University/University.h
-Professor.h
-/home/mehrad/Documents/AP/HW5 University/University/Professor.h
-Student.h
-/home/mehrad/Documents/AP/HW5 University/University/Student.h
-
-/home/mehrad/Documents/AP/HW5 University/University/main.cpp
-Course.h
-/home/mehrad/Documents/AP/HW5 University/University/Course.h
-Person.h
-/home/mehrad/Documents/AP/HW5 University/University/Person.h
-Professor.h
-/home/mehrad/Documents/AP/HW5 University/University/Professor.h
-Student.h
-/home/mehrad/Documents/AP/HW5 University/University/Student.h
-University.h
-/home/mehrad/Documents/AP/HW5 University/University/University.h
 
