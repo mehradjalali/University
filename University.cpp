@@ -12,29 +12,31 @@ University::University(University &second) {
     this->budget = second.budget;
     this->numOfProfessors = second.numOfProfessors;
     this->numOfStudents = second.numOfStudents;
-    for (int i = 0; i < 100; i++) {
-        this->students[i] = second.students[i];
-        this->professors[i] = second.professors[i];
-    }
+    for (int i = 0; i < numOfStudents; i++)
+        this->students[i] = new Student(*second.students[i]);
+    for (int i = 0; i < numOfProfessors; i++)
+        this->professors[i] = new Professor(*second.professors[i]);
 }
 
 University::University(int budget, int numOfStudents, int numOfProfessors, Student *students[100], Professor *professors[100]) {
     this->budget = budget;
     this->numOfProfessors = numOfProfessors;
     this->numOfStudents = numOfStudents;
-    for (int i = 0; i < 100; i++) {
-        this->students[i] = students[i];
-        this->professors[i] = professors[i];
-    }
+    for (int i = 0; i < numOfStudents; i++)
+        this->students[i] = new Student(*students[i]);
+    for (int i = 0; i < numOfProfessors; i++)
+        this->professors[i] = new Professor(*professors[i]);
 }
 
-University::~University() {}
+University::~University() {
+    delete[] students;
+    delete[] professors;
+}
 
 double University::averageGpa() {
     double sum = 0;
-    for (int i = 0; i < numOfStudents; i++) {
+    for (int i = 0; i < numOfStudents; i++)
         sum += students[i]->gpa();
-    }
     return sum / numOfStudents;
 }
 
@@ -91,10 +93,9 @@ void University::printCourses() {
         for (int j = i + 1; j < courses.size(); j++) {
             string b = courses[j];
             double jAvg = coursesSum[b].F / coursesSum[b].S;
-            if (iAvg > jAvg) {
-                courses[i] = b;
+            if (iAvg > jAvg)
+                courses[i] = b,
                 courses[j] = a;
-            }
         }
         for (auto u : courses) {
             double Avg = coursesSum[u].F / coursesSum[u].S;
