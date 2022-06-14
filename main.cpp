@@ -116,11 +116,11 @@ istream &operator>>(istream &is, University &first){
     }
     cout << "Enter number of students: ";
     is >> first.numOfStudents;
-    Student temp;
+    Student temp2;
     for (int i = 0; i < first.numOfStudents; i++){
         cout << "Enter student " << i << ": ";
-        is >> temp;
-        first.setProfessor(i, temp);
+        is >> temp2;
+        first.setStudent(i, temp2);
     }
 }
 
