@@ -2,9 +2,13 @@
 
 Course::Course(){};
 
-Course::Course(string name, int unit, double *mark) : name(name), unit(unit), mark(mark) {}
+Course::Course(string name, int unit, double mark) : name(name), unit(unit) {
+    this->mark = new double(mark);
+}
 
-Course::~Course() {}
+Course::~Course() {
+    delete mark;
+}
 
 Course::Course(const Course &second) {
     this->name = second.name;
