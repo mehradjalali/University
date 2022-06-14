@@ -77,6 +77,26 @@ istream &operator>>(istream &is, Student &first) {
     is >> first.numOfCourses;
     for (int i = 0; i < first.numOfCourses; i++)
         is >> first.getCourse(i);
+    return is;
+}
+
+istream &operator>> (istream &is, Professor &first){
+    is >> (Person &)first;
+    cout << "Enter title: ";
+    string s;
+    bool F = false;
+    is >> s;
+    for (int i = 0; i < 4; i++){
+        if (first.titles[i] == s){
+            F = true;
+            first.setTitle(ProfessorTitle(i));
+        }
+    }
+    if (!F){
+        cout << "invalid title";
+        exit(0);
+    }
+    return is;
 }
 
 int main() {
