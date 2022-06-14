@@ -11,7 +11,7 @@ public:
     friend ostream &operator<<(ostream &, Person &);
     friend istream &operator>>(istream &, Person &);
     Person();
-    Person(string, string, string, double *);
+    Person(string, string, string, double);
     ~Person();
     Person(const Person &);
 
@@ -23,7 +23,7 @@ public:
     void setFirstName(string firstName);
     void setLastName(string lastName);
     void setId(string id);
-    void setWorkHours(double *workHours);
+    void setWorkHours(double workHours);
 
     virtual bool validate(string);
     void error(string);
