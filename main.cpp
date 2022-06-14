@@ -48,6 +48,19 @@ istream& operator>>(istream& is, Course& first){
     is >> *first.mark;
 }
 
+istream& operator>>(istream&is, Person& first){
+    cout << "Enter first name: ";
+    is >> first.firstName;
+    cout << "Enter last name: ";
+    is >> first.lastName;
+    cout << "id";
+    is >> first.id;
+    if (!first.validate(first.id))
+        first.error("invalid id");
+    cout << "workHours: ";
+    is >> *first.workHours;
+}
+
 int main(){
     Course c[2];
     double a = 20, a1 = 19, a2 = 7;
