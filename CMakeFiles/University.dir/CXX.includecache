@@ -6,59 +6,63 @@
 
 #IncludeRegexTransform: 
 
-/home/amin/Documents/ap/jungle/second/Course.cpp
+/home/mehrad/Documents/AP/HW5 University/University/Course.cpp
 Course.h
-/home/amin/Documents/ap/jungle/second/Course.h
+/home/mehrad/Documents/AP/HW5 University/University/Course.h
 
-/home/amin/Documents/ap/jungle/second/Course.h
+/home/mehrad/Documents/AP/HW5 University/University/Course.h
 iostream
 -
 
-/home/amin/Documents/ap/jungle/second/Person.cpp
+/home/mehrad/Documents/AP/HW5 University/University/Person.cpp
 Person.h
-/home/amin/Documents/ap/jungle/second/Person.h
+/home/mehrad/Documents/AP/HW5 University/University/Person.h
 
-/home/amin/Documents/ap/jungle/second/Person.h
+/home/mehrad/Documents/AP/HW5 University/University/Person.h
 iostream
 -
 regex
 -
 
-/home/amin/Documents/ap/jungle/second/Professor.cpp
+/home/mehrad/Documents/AP/HW5 University/University/Professor.cpp
 Professor.h
-/home/amin/Documents/ap/jungle/second/Professor.h
+/home/mehrad/Documents/AP/HW5 University/University/Professor.h
 
-/home/amin/Documents/ap/jungle/second/Professor.h
+/home/mehrad/Documents/AP/HW5 University/University/Professor.h
 Person.h
-/home/amin/Documents/ap/jungle/second/Person.h
+/home/mehrad/Documents/AP/HW5 University/University/Person.h
 
-/home/amin/Documents/ap/jungle/second/Student.cpp
+/home/mehrad/Documents/AP/HW5 University/University/Student.cpp
 Student.h
-/home/amin/Documents/ap/jungle/second/Student.h
+/home/mehrad/Documents/AP/HW5 University/University/Student.h
 
-/home/amin/Documents/ap/jungle/second/Student.h
-Person.h
-/home/amin/Documents/ap/jungle/second/Person.h
+/home/mehrad/Documents/AP/HW5 University/University/Student.h
 Course.h
-/home/amin/Documents/ap/jungle/second/Course.h
+/home/mehrad/Documents/AP/HW5 University/University/Course.h
+Person.h
+/home/mehrad/Documents/AP/HW5 University/University/Person.h
 
-/home/amin/Documents/ap/jungle/second/University.cpp
+/home/mehrad/Documents/AP/HW5 University/University/University.cpp
 University.h
-/home/amin/Documents/ap/jungle/second/University.h
+/home/mehrad/Documents/AP/HW5 University/University/University.h
+fstream
+-
 
-/home/amin/Documents/ap/jungle/second/University.h
-Student.h
-/home/amin/Documents/ap/jungle/second/Student.h
+/home/mehrad/Documents/AP/HW5 University/University/University.h
 Professor.h
-/home/amin/Documents/ap/jungle/second/Professor.h
+/home/mehrad/Documents/AP/HW5 University/University/Professor.h
+Student.h
+/home/mehrad/Documents/AP/HW5 University/University/Student.h
 
-/home/amin/Documents/ap/jungle/second/main.cpp
+/home/mehrad/Documents/AP/HW5 University/University/main.cpp
 Course.h
-/home/amin/Documents/ap/jungle/second/Course.h
+/home/mehrad/Documents/AP/HW5 University/University/Course.h
 Person.h
-/home/amin/Documents/ap/jungle/second/Person.h
-Student.h
-/home/amin/Documents/ap/jungle/second/Student.h
+/home/mehrad/Documents/AP/HW5 University/University/Person.h
 Professor.h
-/home/amin/Documents/ap/jungle/second/Professor.h
+/home/mehrad/Documents/AP/HW5 University/University/Professor.h
+Student.h
+/home/mehrad/Documents/AP/HW5 University/University/Student.h
+University.h
+/home/mehrad/Documents/AP/HW5 University/University/University.h
 

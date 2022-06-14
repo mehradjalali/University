@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/amin/Documents/ap/jungle/second/Course.cpp" "/home/amin/Documents/ap/jungle/second/CMakeFiles/University.dir/Course.cpp.o"
-  "/home/amin/Documents/ap/jungle/second/Person.cpp" "/home/amin/Documents/ap/jungle/second/CMakeFiles/University.dir/Person.cpp.o"
-  "/home/amin/Documents/ap/jungle/second/Professor.cpp" "/home/amin/Documents/ap/jungle/second/CMakeFiles/University.dir/Professor.cpp.o"
-  "/home/amin/Documents/ap/jungle/second/Student.cpp" "/home/amin/Documents/ap/jungle/second/CMakeFiles/University.dir/Student.cpp.o"
-  "/home/amin/Documents/ap/jungle/second/University.cpp" "/home/amin/Documents/ap/jungle/second/CMakeFiles/University.dir/University.cpp.o"
-  "/home/amin/Documents/ap/jungle/second/main.cpp" "/home/amin/Documents/ap/jungle/second/CMakeFiles/University.dir/main.cpp.o"
+  "/home/mehrad/Documents/AP/HW5 University/University/Course.cpp" "/home/mehrad/Documents/AP/HW5 University/University/CMakeFiles/University.dir/Course.cpp.o"
+  "/home/mehrad/Documents/AP/HW5 University/University/Person.cpp" "/home/mehrad/Documents/AP/HW5 University/University/CMakeFiles/University.dir/Person.cpp.o"
+  "/home/mehrad/Documents/AP/HW5 University/University/Professor.cpp" "/home/mehrad/Documents/AP/HW5 University/University/CMakeFiles/University.dir/Professor.cpp.o"
+  "/home/mehrad/Documents/AP/HW5 University/University/Student.cpp" "/home/mehrad/Documents/AP/HW5 University/University/CMakeFiles/University.dir/Student.cpp.o"
+  "/home/mehrad/Documents/AP/HW5 University/University/University.cpp" "/home/mehrad/Documents/AP/HW5 University/University/CMakeFiles/University.dir/University.cpp.o"
+  "/home/mehrad/Documents/AP/HW5 University/University/main.cpp" "/home/mehrad/Documents/AP/HW5 University/University/CMakeFiles/University.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

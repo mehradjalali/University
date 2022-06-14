@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/amin/Documents/ap/jungle/second
+CMAKE_SOURCE_DIR = "/home/mehrad/Documents/AP/HW5 University/University"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/amin/Documents/ap/jungle/second
+CMAKE_BINARY_DIR = "/home/mehrad/Documents/AP/HW5 University/University"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -74,14 +74,14 @@ clean: CMakeFiles/University.dir/clean
 CMakeFiles/University.dir/all:
 	$(MAKE) -f CMakeFiles/University.dir/build.make CMakeFiles/University.dir/depend
 	$(MAKE) -f CMakeFiles/University.dir/build.make CMakeFiles/University.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/amin/Documents/ap/jungle/second/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target University"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/mehrad/Documents/AP/HW5 University/University/CMakeFiles" --progress-num=1,2,3,4,5,6,7 "Built target University"
 .PHONY : CMakeFiles/University.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/University.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/amin/Documents/ap/jungle/second/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/mehrad/Documents/AP/HW5 University/University/CMakeFiles" 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/University.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/amin/Documents/ap/jungle/second/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/mehrad/Documents/AP/HW5 University/University/CMakeFiles" 0
 .PHONY : CMakeFiles/University.dir/rule
 
 # Convenience name for target.

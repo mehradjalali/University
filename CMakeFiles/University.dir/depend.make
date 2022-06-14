@@ -27,5 +27,6 @@ CMakeFiles/University.dir/main.cpp.o: Course.h
 CMakeFiles/University.dir/main.cpp.o: Person.h
 CMakeFiles/University.dir/main.cpp.o: Professor.h
 CMakeFiles/University.dir/main.cpp.o: Student.h
+CMakeFiles/University.dir/main.cpp.o: University.h
 CMakeFiles/University.dir/main.cpp.o: main.cpp
 

@@ -202,4 +202,5 @@ istream &operator>>(istream &is, University &first) {
         is >> temp2;
         first.setStudent(i, temp2);
     }
+    return is;
 }

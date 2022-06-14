@@ -1,4 +1,4 @@
-# Install script for directory: /home/amin/Documents/ap/jungle/second
+# Install script for directory: /home/mehrad/Documents/AP/HW5 University/University
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/amin/Documents/ap/jungle/second/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/mehrad/Documents/AP/HW5 University/University/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
