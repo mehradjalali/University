@@ -7,6 +7,7 @@
 class University {
 public:
     friend ostream &operator<<(ostream &, University &);
+    friend istream &operator>>(istream &, University &);
 
     University();
     University(University &);
@@ -28,6 +29,8 @@ public:
 
 private:
     void sort(Person *, int);
+    void setStudent(int, Student);
+    void setProfessor(int, Professor);
 };
 
 #endif

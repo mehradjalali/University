@@ -76,30 +76,52 @@ istream &operator>>(istream &is, Student &first) {
     cout << "Enter number of courses: ";
     is >> first.numOfCourses;
     Course temp;
-    for (int i = 0; i < first.numOfCourses; i++){
+    for (int i = 0; i < first.numOfCourses; i++) {
+        cout << "Enter course " << i << ": ";
         is >> temp;
         first.setCourse(i, temp);
     }
     return is;
 }
 
-istream &operator>> (istream &is, Professor &first){
+istream &operator>>(istream &is, Professor &first) {
     is >> (Person &)first;
     cout << "Enter title: ";
     string s;
     bool F = false;
     is >> s;
-    for (int i = 0; i < 4; i++){
-        if (first.titles[i] == s){
+    for (int i = 0; i < 4; i++) {
+        if (first.titles[i] == s) {
             F = true;
             first.setTitle(ProfessorTitle(i));
         }
     }
-    if (!F){
+    if (!F) {
         cout << "invalid title";
         exit(0);
     }
     return is;
+}
+
+istream &operator>>(istream &is, University &first){
+    cout << "Enter budget: ";
+    is >> first.budget;
+    cout << "Enter number of professors: ";
+    is >> first.numOfProfessors;
+    Professor temp;
+    for (int i = 0; i < first.numOfProfessors; i++){
+        cout << "Enter professor " << i << ": ";
+        is >> temp;
+        first.setProfessor(i, temp);
+    }
+    cout << "Enter number of students: ";
+    is >> first.numOfStudents;
+    Student temp;
+    for (int i = 0; i < first.numOfStudents; i++){
+        cout << "Enter student " << i << ": ";
+        is >> temp;
+        first.setProfessor(i, temp);
+    }
 }
 
 int main() {

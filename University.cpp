@@ -143,3 +143,11 @@ void University::sort(Person *p, int n) {
         }
     }
 }
+
+void University::setStudent(int index, Student student) {
+    *students[index] = student;
+}
+
+void University::setProfessor(int index, Professor professor) {
+    *professors[index] = professor;
+}
