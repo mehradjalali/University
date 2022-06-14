@@ -39,9 +39,9 @@ void Student::setFieldOfStudy(string field) {
 }
 
 bool Student::validate(string id) {
-    regex patt1("9[0-9][*][^0-9]{1,2}[0-4|6-9]{5}");
-    regex patt2("8[4-9][*][^0-9]{1,2}[0-4|6-9]{5}");
-    regex patt3("00[*][^0-9]{1,2}[0-4|6-9]{5}");
+    regex patt1("9[0-9][*][^0-9]{,2}[0-4|6-9]{5}");
+    regex patt2("8[4-9][*][^0-9]{,2}[0-4|6-9]{5}");
+    regex patt3("00[*][^0-9]{,2}[0-4|6-9]{5}");
     return regex_match(id, patt1) or regex_match(id, patt2) or regex_match(id, patt3);
 }
 
