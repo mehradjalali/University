@@ -75,8 +75,11 @@ istream &operator>>(istream &is, Student &first) {
     is >> first.fieldOfStudy;
     cout << "Enter number of courses: ";
     is >> first.numOfCourses;
-    for (int i = 0; i < first.numOfCourses; i++)
-        is >> first.getCourse(i);
+    Course temp;
+    for (int i = 0; i < first.numOfCourses; i++){
+        is >> temp;
+        first.setCourse(i, temp);
+    }
     return is;
 }
 

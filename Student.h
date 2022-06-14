@@ -16,7 +16,8 @@ public:
 
     string getFieldOfStudy();
     int getNumOfCourses();
-    Course &getCourse(int);
+    Course getCourse(int);
+    void setCourse(int, Course);
 
     void setFieldOfStudy(string);
     void setNumOfCourses(int);
