@@ -22,7 +22,7 @@ public:
 
     int getUnit();
 
-    void setMark(double *);
+    void setMark(double);
 
     double getMark();
 

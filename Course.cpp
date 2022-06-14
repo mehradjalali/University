@@ -28,8 +28,8 @@ int Course::getUnit() {
     return unit;
 }
 
-void Course::setMark(double *mark) {
-    this->mark = mark;
+void Course::setMark(double mark) {
+    *this->mark = mark;
 }
 
 double Course::getMark() {
