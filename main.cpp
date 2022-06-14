@@ -128,7 +128,7 @@ ostream &operator<<(ostream &os, University &first) {
 istream &operator>>(istream &is, Course &first) {
     cout << "Enter name: ";
     is >> first.name;
-    cout << "\nEnter unit: ";
+    cout << "Enter unit: ";
     is >> first.unit;
     cout << "Enter mark: ";
     is >> *first.mark;
@@ -140,7 +140,7 @@ istream &operator>>(istream &is, Person &first) {
     is >> first.firstName;
     cout << "Enter last name: ";
     is >> first.lastName;
-    cout << "Enter id";
+    cout << "Enter id: ";
     is >> first.id;
     if (!first.validate(first.id))
         first.error("invalid id");
@@ -157,7 +157,7 @@ istream &operator>>(istream &is, Student &first) {
     is >> first.numOfCourses;
     Course temp;
     for (int i = 0; i < first.numOfCourses; i++) {
-        cout << "Enter course " << i << ": ";
+        cout << "Enter course " << i << ":\n";
         is >> temp;
         first.setCourse(i, temp);
     }
@@ -190,7 +190,7 @@ istream &operator>>(istream &is, University &first) {
     is >> first.numOfProfessors;
     Professor temp;
     for (int i = 0; i < first.numOfProfessors; i++) {
-        cout << "Enter professor " << i << ": ";
+        cout << "Enter professor " << i << ":\n";
         is >> temp;
         first.setProfessor(i, temp);
     }
@@ -198,7 +198,7 @@ istream &operator>>(istream &is, University &first) {
     is >> first.numOfStudents;
     Student temp2;
     for (int i = 0; i < first.numOfStudents; i++) {
-        cout << "Enter student " << i << ": ";
+        cout << "Enter student " << i << ":\n";
         is >> temp2;
         first.setStudent(i, temp2);
     }
