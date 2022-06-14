@@ -2,21 +2,27 @@
 
 Student::Student() : Person(){};
 
-Student::Student(string firstName, string lastName, string id, double *workHours, Course *courses, string fieldOfStudy, int numOfCourses) : Person(firstName, lastName, id, workHours) {
-    this->courses = courses;
+Student::Student(string firstName, string lastName, string id, double workHours, Course *courses, string fieldOfStudy, int numOfCourses) : Person(firstName, lastName, id, workHours) {
     this->fieldOfStudy = fieldOfStudy;
     this->numOfCourses = numOfCourses;
     if (!validate(getId()))
         error("invalid id");
+    this->courses = new Course[numOfCourses];
+    for (int i = 0; i < numOfCourses; i++)
+        this->courses[i] = courses[i];
 }
 
 Student::Student(Student &second) {
-    this->courses = second.courses;
     this->numOfCourses = second.numOfCourses;
     this->fieldOfStudy = second.fieldOfStudy;
+    this->courses = new Course[numOfCourses];
+    for (int i = 0; i < numOfCourses; i++)
+        this->courses[i] = second.courses[i];
 }
 
-Student::~Student() {}
+Student::~Student() {
+    delete[] courses;
+}
 
 string Student::getFieldOfStudy() {
     return fieldOfStudy;
@@ -28,10 +34,6 @@ int Student::getNumOfCourses() {
 
 void Student::setFieldOfStudy(string field) {
     this->fieldOfStudy = field;
-}
-
-void Student::setNumOfCourses(int num) {
-    this->numOfCourses = num;
 }
 
 bool Student::validate(string id) {
@@ -55,9 +57,13 @@ double Student::calculateSalary() {
 }
 
 Course Student::getCourse(int index) {
+    if (index >= numOfCourses)
+        error("invalid index");
     return courses[index];
 }
 
 void Student::setCourse(int index, Course course) {
+    if (index >= numOfCourses)
+        error("invalid index");
     courses[index] = course;
 }

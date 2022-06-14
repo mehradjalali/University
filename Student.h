@@ -10,7 +10,7 @@ public:
     friend istream &operator>>(istream &, Student &);
 
     Student();
-    Student(string firstName, string lastName, string id, double *workHours, Course *courses, string fieldOfStudy, int numOfCourses);
+    Student(string firstName, string lastName, string id, double workHours, Course *courses, string fieldOfStudy, int numOfCourses);
     Student(Student &);
     ~Student();
 
@@ -19,7 +19,6 @@ public:
     Course getCourse(int);
 
     void setFieldOfStudy(string);
-    void setNumOfCourses(int);
 
     virtual bool validate(string) final override;
     double gpa();
