@@ -25,9 +25,9 @@ public:
     virtual bool validate(string) final override;
     virtual double calculateSalary() final override;
 
-    string titles[4] = {"INSTRUCTOR", "ASSISTANT_PROFESSOR", "ASSOCIATE_PROFESSOR", "PROFESSOR"};
 
 private:
+    string titles[4] = {"INSTRUCTOR", "ASSISTANT_PROFESSOR", "ASSOCIATE_PROFESSOR", "PROFESSOR"};
     ProfessorTitle title;
 };
 
