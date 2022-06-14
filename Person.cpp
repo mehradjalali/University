@@ -11,6 +11,13 @@ Person::Person(string firstName, string lastName, string id, double workHours) {
         error("invalid id");
 }
 
+Person::Person(const Person &second) {
+    this->firstName = second.firstName;
+    this->lastName = second.lastName;
+    this->id = id;
+    this->workHours = new double (*second.workHours);
+}
+
 Person::~Person(){
     delete workHours;
 };
