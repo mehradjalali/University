@@ -1,7 +1,7 @@
 #include "Student.h"
 
 Student::Student() : Person(){
-    this->courses = new Course();
+    this->courses = new Course[100];
 };
 
 Student::Student(string firstName, string lastName, string id, double workHours, Course *courses, string fieldOfStudy, int numOfCourses) : Person(firstName, lastName, id, workHours) {

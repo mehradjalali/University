@@ -154,7 +154,9 @@ istream &operator>>(istream &is, Person &first) {
 istream &operator>>(istream &is, Student &first) {
     is >> (Person &)first;
     cout << "Enter field of study: ";
-    is >> first.fieldOfStudy;
+    string s;
+    is >> s;
+    first.setFieldOfStudy(s);
     cout << "Enter number of courses: ";
     is >> first.numOfCourses;
     for (int i = 0; i < first.numOfCourses; i++) {
