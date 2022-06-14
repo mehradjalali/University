@@ -26,7 +26,6 @@ public:
     void setWorkHours(double workHours);
 
     virtual bool validate(string);
-    void error(string);
     virtual double calculateSalary();
 
     Person &operator=(Person &first);
@@ -36,5 +35,8 @@ private:
     string lastName;
     string id;
     double *workHours;
+    
+protected:
+    void error(string);
 };
 #endif
