@@ -18,7 +18,7 @@ University::University(const University &second) {
         this->professors[i] = new Professor(*second.professors[i]);
 }
 
-University::University(int budget, int numOfStudents, int numOfProfessors, Student *students[100], Professor *professors[100]) {
+University::University(ll budget, int numOfStudents, int numOfProfessors, Student *students[100], Professor *professors[100]) {
     this->budget = budget;
     this->numOfProfessors = numOfProfessors;
     this->numOfStudents = numOfStudents;

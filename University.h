@@ -4,6 +4,7 @@
 #include "Professor.h"
 #include "Student.h"
 
+typedef long long ll;
 class University {
 public:
     friend ostream &operator<<(ostream &, University &);
@@ -11,7 +12,7 @@ public:
 
     University();
     University(const University &);
-    University(int, int, int, Student *[100], Professor *[100]);
+    University(ll, int, int, Student *[100], Professor *[100]);
     ~University();
 
     void printCourses();
@@ -21,7 +22,7 @@ public:
     double averageMarkOfCourse(string);
     bool isEnoughBudget();
 
-    int budget;
+    ll budget;
     int numOfProfessors;
     int numOfStudents;
     Student *students[100];
