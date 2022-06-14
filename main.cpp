@@ -145,7 +145,9 @@ istream &operator>>(istream &is, Person &first) {
     if (!first.validate(first.id))
         first.error("invalid id");
     cout << "workHours: ";
-    is >> *first.workHours;
+    double temp;
+    is >> temp;
+    first.setWorkHours(temp);
     return is;
 }
 
