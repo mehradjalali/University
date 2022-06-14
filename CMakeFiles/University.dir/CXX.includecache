@@ -16,10 +16,6 @@ iostream
 regex
 -
 
-/home/mehrad/Documents/AP/HW5 University/University/Professor.cpp
-Professor.h
-/home/mehrad/Documents/AP/HW5 University/University/Professor.h
-
 /home/mehrad/Documents/AP/HW5 University/University/Professor.h
 Person.h
 /home/mehrad/Documents/AP/HW5 University/University/Person.h
@@ -29,12 +25,6 @@ Course.h
 /home/mehrad/Documents/AP/HW5 University/University/Course.h
 Person.h
 /home/mehrad/Documents/AP/HW5 University/University/Person.h
-
-/home/mehrad/Documents/AP/HW5 University/University/University.cpp
-University.h
-/home/mehrad/Documents/AP/HW5 University/University/University.h
-fstream
--
 
 /home/mehrad/Documents/AP/HW5 University/University/University.h
 Professor.h

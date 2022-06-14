@@ -172,8 +172,8 @@ istream &operator>>(istream &is, Professor &first) {
     string s;
     bool F = false;
     is >> s;
-    for (int i = 0; i < 4; i++) {
-        if (first.titles[i] == s) {
+    for (auto u : first.titles){
+        if (u == s){
             F = true;
             first.setTitle(s);
         }

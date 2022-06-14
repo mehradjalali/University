@@ -6,7 +6,10 @@
 #define PB push_back
 typedef pair<double, double> pdd;
 
-University::University() {}
+University::University() {
+    *this->professors = new Professor[100];
+    *this->students = new Student[100];
+}
 
 University::University(const University &second) {
     this->budget = second.budget;
