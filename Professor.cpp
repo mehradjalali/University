@@ -25,5 +25,7 @@ bool Professor::validate(string id) {
 }
 
 double Professor::calculateSalary() {
-    return getWorkHours() * (50000 + (title + 1) * 10000);
+    string temp = this->getId();
+    int exp = 101 - ((temp[0] - '0') * 10 + (temp[1] - '0'));
+    return getWorkHours() * (50000 + (title + 1) * 10000 + exp);
 }
